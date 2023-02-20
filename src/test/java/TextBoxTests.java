@@ -8,14 +8,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxTests {
 
-    Faker faker = new Faker();
+    Faker data = new Faker();
 
-    String firstName = faker.name().firstName();
-    String lastName = faker.name().lastName();
+    String firstName = data.name().firstName();
+    String lastName = data.name().lastName();
     String fullName = firstName + " " + lastName;
     String email = firstName + '.' + lastName + "@example.com";
-    String currAddress = faker.address().fullAddress();
-    String permAddress = faker.address().fullAddress();
+    String currAddress = data.address().fullAddress();
+    String permAddress = data.address().fullAddress();
 
     @BeforeAll
     static void beforeAll() {
@@ -26,9 +26,6 @@ public class TextBoxTests {
     @Test
     void fillFormTest() {
         open("/text-box");
-
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
 
         $("#userName").setValue(fullName);
         $("#userEmail").setValue(email);
