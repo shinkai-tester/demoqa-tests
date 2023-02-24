@@ -1,4 +1,4 @@
-package selenide;
+package examples;
 
 import com.codeborne.selenide.*;
 import org.openqa.selenium.*;
@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 // this is not a full list, just the most common
-public class Snippets {
+public class SelenideSnippets {
 
     void browser_command_examples() {
         open("https://google.com");
