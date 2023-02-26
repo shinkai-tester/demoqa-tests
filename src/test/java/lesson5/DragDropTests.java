@@ -17,7 +17,7 @@ public class DragDropTests {
     }
 
     @Test
-    void DragAndDropTest() {
+    void dragAndDropTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         SelenideElement elemA = $("#column-a");
         SelenideElement elemB = $("#column-b");
